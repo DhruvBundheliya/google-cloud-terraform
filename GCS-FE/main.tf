@@ -50,7 +50,7 @@ resource "google_compute_url_map" "default" {
     default_service = module.bucket.id
 
     path_rule {
-      paths   = var.path_rule
+      paths   = var.paths
       service = module.bucket.id
     }
   }

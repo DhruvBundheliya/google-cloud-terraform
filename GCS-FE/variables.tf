@@ -50,7 +50,34 @@ variable "path_matcher_name" {
   description = "value of the path matcher name"
 }
 
-variable "path_rule" {
+variable "http_proxy_name" {
   type = string
-  description = "value of the backend service name"
+  description = "value of the http proxy name"
+}
+
+variable "forwarding_rule_name" {
+  type = string
+  description = "value of the forwarding rule name"
+}
+
+variable "forwarding_rule_ip_protocol" {
+  type = string
+  description = "value of the forwarding rule ip protocol"
+}
+
+variable "load_balancing_scheme" {
+  type = string
+  description = "value of the load balancing scheme"
+  default = "EXTERNAL"
+}
+
+variable "port_range" {
+  type = string
+  description = "value of the port range"
+  default = "80"
+}
+
+variable "paths" {
+  type = list(string)
+  description = "value of the path"
 }
